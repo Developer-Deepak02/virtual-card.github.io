@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 50rem;
+    height: 30rem;
+    color: #fff;
+    cursor: pointer;
+    perspective: 100rem;
+}
+
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front , .back{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #0045c7 , #ff2c7d);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem 3rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.map-img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.card-no{
+    font-size: 3.2rem;
+    margin-top: 5rem;
+    font-weight: bolder;
+}
+
+.card-holder{
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.name{
+    font-size: 2.2rem;
+    margin-top: 2rem;
+}
+
+.bar{
+    background: #222;
+    margin-left: -3rem;
+    margin-right: -3rem;
+    height: 5rem;
+    margin-top: 1rem;
+}
+
+.card-cvv{
+    margin-top: 2rem;
+}
+
+.card-cvv div{
+    flex: 1;
+}
+
+.card-cvv img{
+    width: 100%;
+    display: block;
+    line-height: 0;
+}
+
+.card-cvv p{
+    background: #fff;
+    color: #000;
+    font-size: 2.2rem;
+    padding: 1rem 2rem;
+    font-weight: bolder;
+}
+
+.card-text{
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.signature{
+    margin-top: 3rem;
+    font-weight: 800;
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-inner{
+    transform: rotateY(-180deg);
+}
+
+.visa-img{
+    width: 8rem;
+}
+
+.chip-img{
+    width: 6rem;
+}
+
+@media (max-width:555px) {
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:475px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width:420px) {
+    html{
+        font-size: 45%;
+    }
+}
+@media (max-width:377px) {
+    html{
+        font-size: 38%;
+    }
+}
+@media (max-width:330px) {
+    html{
+        font-size: 28%;
+    }
+}
